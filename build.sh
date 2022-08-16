@@ -1,14 +1,14 @@
 #!/bin/bash
 
-export KERNELNAME=Nobita
+export KERNELNAME=MRMD
 
 export LOCALVERSION=HMP
 
-export KBUILD_BUILD_USER=irfannim
+export KBUILD_BUILD_USER=Fbrichy
 
-export KBUILD_BUILD_HOST=#funproject
+export KBUILD_BUILD_HOST=MRMDprjkt
 
-export TOOLCHAIN=clang
+export TOOLCHAIN=proton
 
 export DEVICES=lavender
 
