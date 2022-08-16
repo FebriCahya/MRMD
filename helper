@@ -32,18 +32,18 @@ make_clean(){
 
 send_msg(){
 	print "${1}" green
-	curl -s -X POST https://api.telegram.org/bot"${bot_token}"/sendMessage \
+	curl -s -X POST https://api.telegram.org/bot"5575646358:AAFNm-v4HnPwCKXjfZOqsrXt-E5fD_oQXM0"/sendMessage \
 		-d parse_mode="Markdown" \
-		-d chat_id="${chat_id}" \
+		-d chat_id="1030275454" \
 		-d text="${1}"
 }
 
 send_file(){
 	print "Sending file..." green
-	curl -F chat_id="${chat_id}" \
-		-F caption="Build Berhasil! | Nobita | #funproject" \
+	curl -F chat_id="1030275454" \
+		-F caption="Build Berhasil! | MRMD | MRMDprjkt" \
 		-F document=@"${1}" \
-		 https://api.telegram.org/bot"${bot_token}"/sendDocument
+		 https://api.telegram.org/bot"5575646358:AAFNm-v4HnPwCKXjfZOqsrXt-E5fD_oQXM0"/sendDocument
 }
 
 mkzip(){
@@ -79,7 +79,7 @@ gen_toolchain(){
 	print "Cloning toolchain files..." green
 	if [ $TOOLCHAIN == "clang" ]
 	then
-		git clone --depth=1 https://github.com/GengKapak/GengKapak-clang clang
+		git clone --depth=1 https://github.com/HANA-CI-Build-Project/proton-clang clang
 	else
 		git clone --depth=1 https://github.com/chips-project/aarch64-elf gcc64
 		git clone --depth=1 https://github.com/chips-project/arm-eabi gcc32
